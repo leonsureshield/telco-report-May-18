@@ -1,0 +1,820 @@
+
+
+INDUSTRY REPORT
+
+The State of US Telecommunications
+
+Cyber Risk in a Critical-Infrastructure Sector
+
+An industry-level review of cyber risk indicators across 4,975 US telecommunications providers, drawing on publicly available information and contextualized against established industry research.
+
+4,975
+
+US telcos in analysis
+
+3,106
+
+operators reviewed
+
+2,132
+
+with full profiles
+
+64.8%
+
+in elevated risk band
+
+Prepared April 2026 · For industry awareness and policy discussion only.
+
+All findings are derived exclusively from publicly available sources and presented at the industry level. No individual provider is named in this report. Please see the Disclaimer on page 2 before reading further.
+
+Disclaimer and Important Notices
+
+This report is provided for general informational and educational purposes only. By reading this report, the reader acknowledges and agrees to the following:
+
+1. Purpose and General Use Statement 
+
+This document is intended to support public interest analysis and policy discussion concerning systemic cybersecurity vulnerability conditions within the US telecommunications sector, based on the synthesis of publicly available information. The report is designed to support regulatory awareness, program design, and sector-level resilience discussions, including those associated with broadband deployment, infrastructure funding, and operational sustainability initiatives.
+
+2. Report Scope and Limitations
+
+The analyses and observations contained herein:
+
+Were derived exclusively from open-source, publicly disclosed vulnerabilities, cybersecurity advisories, incident reports, domain registry records, public company filings, openly published industry reports and other openly accessible reference material.
+
+Reflect aggregate and sector-level data insights, and not evaluations of individual telecommunications providers or networks.
+
+Do not constitute explicit findings, determinations, compliance judgments, or lack of enforcement conclusions under any statute, rule, or program, including but not limited to FCC regulations or the BEAD Program requirements.
+
+Not a vulnerability assessment, audit or compliance evaluation: This report does not constitute, and should not be construed as, a vulnerability assessment, penetration test, security audit, compliance evaluation, threat assessment, incident-response engagement or definitive evaluation of cybersecurity risk for the telecommunications sector or for any individual provider. It reflects a high-level analysis of publicly available information and is not a definitive indicator of risk, exploitability, compliance status, or operational practice.
+
+All information referenced in this report was derived exclusively from publicly accessible, non-intrusive sources. No authenticated scans were attempted against any system, no access controls were circumvented, no proprietary or non-public data was accessed, and no system performance, availability or confidentiality was impacted in connection with the preparation of this report. No representation is made as to the completeness, accuracy, or contemporaneity of third-party disclosures, which may evolve over time and vary in depth or reliability.
+
+3. No Enforcement, Compliance, or Eligibility Implication
+
+Nothing in this document should be interpreted as:
+
+An allegation of non-compliance, negligence, or misconduct by any US telecommunications provider;
+
+A basis for enforcement, adjudication, or funding eligibility determination;
+
+A substitute for formal regulatory review, audit, or provider self-certification.
+
+No assertions about specific providers: Nothing in this report should be read as an assertion of fact about, an evaluation of, or a judgment regarding any individual telecommunications provider, named or unnamed. Where examples or aggregate counts are given, they are intended solely to convey industry-level patterns. Any inference drawn about a specific provider, named or unnamed, is made by the reader at the reader's own risk.
+
+References to technologies, operational environments, or risk categories are contextual and illustrative only and do not imply regulatory interpretation or policy position.
+
+4. Reliance and Responsibility
+
+This document does not provide or constitute legal, regulatory, technical, or operational advice. Agencies, eligible entities, and stakeholders should rely on their own internal security processes, expertise, and statutory authorities when making programmatic or regulatory decisions.
+
+5. No warranty; limitation of liability
+
+The authors and publishers of this report make no representations or warranties, express or implied, regarding the accuracy, completeness, timeliness, fitness for any particular purpose or reliability of the information presented. All content is provided strictly on an "as-is" basis. The authors and publishers expressly disclaim, to the maximum extent permitted by law, any and all liability arising out of or in connection with any use of, reliance on, or actions taken or not taken on the basis of the contents of this report.
+
+6. Third-party sources, references and trademarks
+
+This report references industry studies, sector statistics, advisories, and threat-landscape findings published by third-party organizations. Such references are made for context and to support readability. The authors of this report make no representation as to the accuracy, completeness or current validity of third-party information; readers should consult the original sources directly. References in this report to any tool, platform, vendor or technology are descriptive only and do not constitute or imply endorsement, affiliation, sponsorship or approval. All trademarks, service marks, and product names are the property of their respective owners.
+
+7. Responsible disclosure and information sensitivity
+
+Sensitive technical detail that could reasonably enable malicious activity has been intentionally omitted, summarized or generalized throughout this report. The authors adhere to widely-recognized responsible disclosure principles consistent with research touching on critical-infrastructure sectors and do not publish information that could foreseeably facilitate unauthorized access to, exploitation of, or operational disruption of any provider's systems.
+
+8. Awareness purpose; no adverse use
+
+This report is intended to support industry awareness, board-level discussion, regulatory engagement, academic interest, and public-interest discourse regarding the cybersecurity posture of the US telecommunications sector. It is not intended for, and should not be used for, competitive intelligence, targeting, or any purpose adverse to the interests of any provider.
+
+READER ACKNOWLEDGEMENT
+
+By continuing to read this report, the reader acknowledges that they have read, understood and accepted, in full, the notices set out in items 1 through 10 above. If the reader does not agree, the reader should not rely on, distribute, cite, or otherwise act on the contents of this report.
+
+1. Why This Report Now
+
+Telecommunications is not just another commercial sector. It is foundational critical national infrastructure: emergency services, government operations, financial systems, healthcare delivery, energy control, transportation, and public-safety communications all depend on it. When telecommunications degrades or fails, everything downstream degrades with it. The cybersecurity posture of the US telecommunications sector is, therefore, a public-interest condition before it is a commercial one.
+
+Conventional cybersecurity reporting in the sector tends to ask internal questions: are controls deployed, are systems patched, were audits passed. Those questions matter at the operator level. But they do not, in aggregate, describe what publicly available information shows about the state of the sector as a whole — which is, increasingly, the lens through which regulators, boards and the public form a view of telecommunications cybersecurity. This report addresses the latter question.
+
+The US telecommunications sector is unusually fragmented at the operator level. Approximately 90% of providers in the FCC registry are privately held; a clear majority generate annual revenue below ten million dollars; the typical provider employs fewer than fifty people. The combination of a long tail of small operators, rising threat activity and increasing regulatory expectation produces a sector-level risk picture materially different from the picture in better-known critical-infrastructure sectors such as finance or energy.
+
+The reasons to bring sector-level visibility to this picture have intensified materially in the past 18 months. In late 2024, US federal authorities publicly disclosed that a sustained, state-aligned cyber-espionage campaign — referred to in public reporting and in subsequent CISA, FBI and NSA advisories under the designation "Salt Typhoon" — had compromised the networks of major US telecommunications providers and had achieved persistent access for the purposes of intelligence collection. A joint advisory issued by CISA, the FBI, the NSA and partner-nation agencies on 27 August 2025 (AA25-239A) characterized the activity as targeting telecommunications, government, transportation, lodging and military networks, with edge devices such as routers, firewalls and VPN appliances as primary points of initial access, frequently through known, unpatched vulnerabilities.
+
+The volume picture is consistent. The FBI's Internet Crime Complaint Center reported, in its 2024 Annual Report, total cybercrime losses of approximately $16.6 billion across more than 859,000 complaints — a 33% year-over-year increase and a record high — and described ransomware as the most pervasive threat to critical infrastructure. Independent industry research from Verizon (DBIR), IBM (Cost of a Data Breach), Mandiant (M-Trends) and Sophos (State of Ransomware) points in the same direction.
+
+The findings in this report are designed to be useful at three distinct levels. At the industry level, they make it possible to distinguish risk patterns that are isolated to particular operators from risk patterns that are endemic to the sector — the latter typically requiring policy, procurement or standards-level action rather than only individual remediation. At the state and regional level, the same findings can be correlated with public-safety dependencies — 911 and Next-Gen 911 routing, emergency-alert systems, rural infrastructure dependency — turning a cybersecurity picture into a public-safety one. At the operator level, the indicator categories described in this report align with categories already monitored in well-developed cybersecurity programs, and provide a structured reference point for those still being built out.
+
+This report reflects a single point in time, and the picture it presents will change. The intent over time is to convert this snapshot into a longitudinal record — one in which boards, regulators and operators can read not only the current condition of the sector but the rate and direction in which it is changing. The signal that matters most to the long-term integrity of US telecommunications is not "controls were implemented" but "measurable risk has fallen, year over year."
+
+It is against that backdrop that this report is published. Its purpose is to support sector-level awareness, board-level discussion, regulatory engagement and policy formulation — at a sufficient level of detail to inform those discussions, while remaining strictly at the industry level rather than at the individual-operator level.
+
+2. Approach and Sources
+
+This report draws on publicly available information about the US telecommunications industry. The principal reference set is the FCC's public telecommunications provider registry, supplemented by openly published business intelligence on the providers identified in that registry and contextualised against established third-party industry research. The objective is to characterise systemic cyber risk signals affecting the sector at the industry level, with emphasis on structural, economic and disclosure-driven dynamics relevant to policy and program oversight. No organisation-level attribution is offered.
+
+Data sources. Only publicly accessible sources are used — no non-public, investigative or privileged data. Sources include:
+
+The FCC public telecommunications provider registry
+
+Government-maintained vulnerability repositories and advisories
+
+Security advisories issued by technology and equipment vendors
+
+Public vulnerability disclosures aligned to common enumeration schemes (e.g. CVE)
+
+Publicly reported incidents, enforcement summaries and regulatory filings
+
+Openly published industry research, including the Verizon DBIR series and CISA advisories
+
+Analytical universe. The base comprises 4,975 active US telecommunications providers, of which 3,106 were taken forward into the detailed industry analysis, and of which 2,132 carry a fully enriched profile combining business and risk-indicator information. Throughout this report, percentages and counts are reported in relation to the relevant denominator within that universe — typically the 3,106 telcos that form the analytical base, or the 2,132 telcos for which enriched segmentation cuts are possible.
+
+Indicators. Risk indicators referenced in this report are widely-used industry concepts — for example, presence of CVEs catalogued by CISA as actively exploited, posture of email authentication records (DMARC and SPF) as published in DNS, and the relative scale of an operator's public web presence. These indicators are common reference points across multiple cybersecurity research publications.
+
+Processing and aggregation. Collected disclosures are normalised to address duplication across sources, categorised by technology class or functional dependency, and evaluated over time to identify recurring patterns. Outputs are presented using aggregated statistics, ranges and trend indicators; geographic reporting is generalised where necessary; organisation-specific details are excluded from all public outputs. The methodology does not independently verify third-party disclosures or assess remediation status.
+
+Known limitations. Findings should be interpreted as directional indicators of systemic risk, not as deterministic measures of any provider's security posture. Three factors constrain the analysis:
+
+Variability in disclosure practices across vendors and operators
+
+Time lags between discovery, disclosure and public reporting
+
+Absence of visibility into undisclosed vulnerabilities or mitigations
+
+Regulatory context. This analysis complements — not replaces — existing regulatory, grant-oversight and program frameworks. It highlights cross-cutting vulnerability conditions, informs guidance and technical-assistance strategies, and supports resilience considerations in telecommunications policy. It is not intended to establish new regulatory expectations or interpret existing ones.
+
+Findings should be read as industry-level observations rather than as assertions about any individual provider. Aggregate counts and percentages are intended to illuminate sector-wide patterns; they are not intended to enable, and should not be used to attempt, the identification of any specific operator. Further notes on the legal and methodological framing of this report appear in Appendix A.
+
+METHODOLOGY NOTE
+
+This report deliberately remains at the industry level. It does not name individual providers, does not attempt to characterize the security posture of any specific operator, and does not describe the technical mechanics by which industry-level indicators were compiled. It does not constitute, and should not be construed as, a vulnerability assessment, penetration test, security audit or compliance evaluation of the sector or of any provider within it. Readers seeking provider-specific information should approach providers directly.
+
+3. The Structure of the US Telecommunications Industry
+
+Before turning to risk, the report establishes the structural shape of the industry, because that shape determines the operating context in which risk needs to be understood.
+
+3.1 An Overwhelmingly Small Private Industry Operations Environment
+
+Across the 4,975 telcos in the analytical universe, approximately 90% are privately held. Public companies — primarily the large incumbent groups and a handful of cable conglomerates — represent around 8% of the population. The remainder are cooperatives, municipal utilities and a small group of public-benefit corporations operating broadband as a civic service. The industry is, by entity count, a long tail of independent operators.
+
+Revenue distribution reinforces this. The single largest revenue band among the telcos in the analysis is $1M–$10M, capturing 35.7% of providers. Adding the under-$1M band, more than half the industry — 51.7% — operates below the $10M annual revenue line. Only 5.9% of providers report annual revenue above one billion dollars, and these account for the household incumbent names that dominate national consumer awareness but are a numerical minority within the FCC registry.
+
+Headcount tells the same story. Approximately 69% of telcos employ fewer than fifty people. Roughly a third operate with ten or fewer staff. These are organizations in which cybersecurity, networking, customer support and billing are typically managed by the same one or two technical staff.
+
+3.2 Wireless Internet Providers Outnumber Cable Operators
+
+Among providers with a clear classification, Wireless Internet Service Providers (WISPs) total 1,988 — outnumbering cable operators (756) by a factor of approximately 2.6 to 1. WISPs are the dominant rural-broadband delivery model in the US: small, fixed-wireless operators serving sparse populations underserved by fibre or cable. Texas alone hosts 207 WISPs; California, 176; Florida, 148. Iowa, with 65 WISPs and 67 cable operators among 205 total telcos, is unusually dense relative to population — a pattern consistent with decades of rural cooperative investment in independent connectivity.
+
+3.3 Voice over IP Is Now the Largest Service Class
+
+Across the FCC's eighteen principal communications-type categories, Interconnected VoIP leads with 2,109 providers (42.4%), followed by Incumbent Local Exchange Carriers at 974 (19.6%) and competitive local exchange carriers at 576 (11.6%). The shift away from traditional Public Switched Telephone Network operations is now visible at the registry level: a clear plurality of US telcos in 2026 derive their primary FCC classification from internet-based voice rather than legacy wireline.
+
+MARKET STRUCTURE TAKEAWAY
+
+The US telecommunications industry, by entity count, is not a small group of giants. It is a large, fragmented community of small private operators — WISPs, ILECs, VoIP providers and cooperatives — most below ten million dollars in revenue and fewer than fifty staff. Any policy or risk framework that assumes telcos are well-resourced enterprises will fundamentally misread the median operator.
+
+4. Headline Risk Picture
+
+Among the 3,106 telcos taken forward into the detailed industry analysis, the distribution across risk bands — derived from a composite indicator framework grounded in widely-used cybersecurity concepts — is as follows:
+
+Risk band
+
+Telcos
+
+% of analyzed
+
+Industry interpretation
+
+Critical
+
+1,754
+
+56.5%
+
+Multiple elevated risk indicators present in combination
+
+High
+
+257
+
+8.3%
+
+Significant individual indicators present
+
+Medium
+
+739
+
+23.8%
+
+Some indicators present; remediation likely meaningful
+
+Low
+
+258
+
+8.3%
+
+Limited indicators; routine hygiene appropriate
+
+Minimal
+
+98
+
+3.2%
+
+Few or no notable indicators
+
+Aggregating Critical and High, 64.8% of the telcos analyzed sit in an elevated risk band. This is not a tail of laggards. This is the bulk of the curve. The mean composite indicator score across the analytical base is 65.7 out of 100; the median is 78.5; the 75th percentile is 90.0. Half of all telcos analyzed have a composite indicator at a level that places them above the threshold for the Critical band.
+
+This finding is broadly consistent with the picture painted by third-party industry research. Both the Verizon DBIR series and the IBM Cost of a Data Breach Report have, in recent editions, repeatedly highlighted that the cybersecurity posture of small and mid-sized organizations across critical-infrastructure sectors is materially weaker than the public discourse — which tends to focus on large enterprise breaches — would suggest. The findings of this report, while expressed in the specific context of US telecommunications, are consistent with that broader trend.
+
+4.1 What Drives the Elevated Risk Band
+
+Across the 1,754 telcos in the Critical band, the most prevalent contributing factors are widely-recognized industry indicators:
+
+Presence of CVEs that appear on CISA's Known Exploited Vulnerabilities catalogue — 1,195 telcos (38.5% of the analyzed base).
+
+Presence of CVEs with Exploit Prediction Scoring System (EPSS) values that indicate elevated likelihood of exploitation — 968 telcos (31.2%).
+
+Subdomain takeover risk associated with dangling DNS configuration — 1,266 telcos (40.8%); the most widespread single indicator by telco count.
+
+Indicators consistent with public-facing remote-access service configuration — present at meaningful rates across the analyzed base.
+
+Indicators consistent with public-facing database service configuration — present at lower but still material rates.
+
+Web frontend vulnerability indicators consistent with outdated client-side libraries — present across a third of the analyzed base.
+
+KEY TAKEAWAY
+
+The elevated risk band is not driven by exotic or sophisticated vulnerabilities. It is driven by ordinary, well-documented exposures — KEV-listed CVEs that have been public for years, configuration weaknesses in DNS and email authentication, and outdated client-side software. Every category listed is addressable through configuration discipline rather than capital investment.
+
+5. Specific Risk Indicators
+
+5.1 CISA Known Exploited Vulnerabilities
+
+The CISA Known Exploited Vulnerabilities (KEV) catalogue is the authoritative federal list of vulnerabilities confirmed to have been used in real-world attacks. CISA recommends that all federal agencies remediate KEV-listed vulnerabilities within defined timeframes; industry best practice extends the same expectation to critical-infrastructure operators.
+
+The industry analysis identified twenty-five distinct KEV entries that appear in association with US telecommunications infrastructure, of which twelve are explicitly flagged in CISA records as having been used in known ransomware campaigns. Notable examples include long-known but persistently unremediated entries such as:
+
+CVE
+
+Component family
+
+Vulnerability category
+
+Ransomware-linked
+
+CVE-2019-0708
+
+Microsoft RDP
+
+BlueKeep — remote code execution
+
+Yes
+
+CVE-2020-0796
+
+Microsoft SMBv3
+
+SMBGhost — remote code execution
+
+Yes
+
+CVE-2021-26857
+
+Microsoft Exchange
+
+ProxyLogon chain
+
+Yes
+
+CVE-2021-26858
+
+Microsoft Exchange
+
+ProxyLogon chain
+
+Yes
+
+CVE-2024-4577
+
+PHP-CGI
+
+Argument injection RCE
+
+Yes
+
+CVE-2024-38094
+
+Microsoft SharePoint
+
+Deserialization RCE
+
+Yes
+
+CVE-2025-49704
+
+Microsoft SharePoint
+
+Code injection
+
+Yes
+
+CVE-2025-53770
+
+Microsoft SharePoint
+
+Untrusted deserialization
+
+Yes
+
+CVE-2018-6789
+
+Exim mail server
+
+Buffer overflow RCE
+
+Yes
+
+CVE-2019-11043
+
+PHP-FPM
+
+Buffer overflow RCE
+
+Yes
+
+CVE-2014-0160
+
+OpenSSL
+
+Heartbleed information disclosure
+
+—
+
+CVE-2023-44487
+
+HTTP/2
+
+Rapid Reset DDoS (KEV-listed)
+
+—
+
+The presence of vulnerabilities such as BlueKeep and ProxyLogon at the industry level in 2026 is significant. These are widely documented entries that have been publicly known for several years and have been referenced extensively in CISA advisories. Their continued observable presence at the industry level suggests that remediation of components in this category has not been uniformly completed across the analyzed base.
+
+More recent SharePoint and PHP-CGI entries — including CVEs disclosed within the past 18 months — also appear in the industry picture, indicating that patch-currency challenges at the industry level are not confined to any single disclosure period.
+
+5.2 Email Authentication Posture
+
+Email authentication configuration is among the most measurable and most widely benchmarked dimensions of organizational cyber posture. The DMARC and SPF standards have been industry-recommended for over a decade. Industry-level posture across the analytical base is as follows:
+
+31.9%
+
+Weak DMARC
+
+41.6%
+
+Weak SPF
+
+16.0%
+
+Both weak in combination
+
+992 of the 3,106 telcos analyzed (31.9%) publish DMARC records configured weakly — typically with policy p=none, which provides telemetry to the operator but does not instruct receiving servers to reject anything. 1,293 telcos (41.6%) publish SPF records configured with the soft-fail qualifier, which receiving servers may interpret as advisory rather than enforcement. 496 telcos (16.0%) carry both weaknesses on the same domain — the configuration that makes domain spoofing operationally trivial.
+
+The risk amplification for telecommunications providers specifically is significant. Internet service providers are high-trust senders to their customers — billing notices, service alerts and password reset emails from a customer's ISP are among the email types users are most likely to act on without scrutiny. The Verizon DBIR has, in successive editions, identified business email compromise and brand impersonation as among the fastest-growing categories of breach activity.
+
+KEY TAKEAWAY
+
+DMARC enforcement is a DNS configuration change, not a project. For nearly a thousand telcos in the analytical base, moving from p=none to p=reject is a single record edit. The persistence of weak DMARC at the industry level therefore appears more closely associated with awareness and ownership factors than with technical or budget constraints.
+
+6. Infrastructure Posture Indicators
+
+The industry analysis incorporated indicators related to the configuration of administrative, file-transfer, database and network management services associated with telco infrastructure. Aggregate observations are summarized below at the industry level; no specific operator, asset, or technical configuration is identified.
+
+Remote-access service configuration is present at meaningful levels across the analytical base. Industry context: the Verizon DBIR has repeatedly identified compromised remote-access services as a leading initial-access vector in ransomware campaigns affecting small and mid-sized organizations.
+
+Legacy file-transfer protocol configuration is present at higher rates than would be expected of a modernized industry — indicating retained legacy operational workflows in a meaningful share of telcos.
+
+Database service configuration indicators are present at lower but still material rates. Public-facing database services without compensating controls represent a category of risk well documented in industry research, and one routinely cited in cybersecurity advisories as relevant to small and mid-sized operators.
+
+Network management protocol configuration indicators are present at smaller but operationally significant rates. This category is referenced in industry research as a contributing factor in extended attacker dwell-time scenarios within affected networks.
+
+6.1 DNS Configuration and Subdomain Takeover Risk
+
+The single most widespread indicator across the analytical base — present in 1,266 of the 3,106 telcos analyzed (40.8%) — is dangling DNS configuration consistent with subdomain takeover risk. A dangling DNS record occurs when an organization publishes a DNS pointer to a third-party hosted resource (cloud storage, hosted application, content platform) and subsequently decommissions that resource without removing the DNS record.
+
+An attacker who registers the abandoned third-party resource gains the ability to serve content from the operator's legitimate subdomain, often with a valid TLS certificate automatically issued by public certificate authorities. This category of risk is widely discussed in industry security publications and represents a particularly difficult risk for operators to detect internally, because it does not produce alerts in conventional vulnerability management or security information systems.
+
+KEY TAKEAWAY
+
+Dangling DNS configuration is the largest single risk indicator in the industry analysis by carrier count, and the one most invisible to operators. For a telecommunications provider, a successful subdomain takeover converts the operator's brand into a phishing platform without the operator's knowledge.
+
+7. Where the Risk Lives — Segmented Analysis
+
+7.1 By Provider Type — WISP and Cable Are Functionally Indistinguishable
+
+Indicator
+
+WISP segment
+
+Cable segment
+
+% in elevated risk band
+
+70.7%
+
+70.2%
+
+% with KEV-listed CVE present
+
+44.1%
+
+40.9%
+
+% with weak DMARC
+
+36.3%
+
+32.1%
+
+% with weak SPF
+
+43.9%
+
+39.7%
+
+The conventional industry narrative — that WISPs are riskier than cable operators because they are smaller, more rural and less resourced — is not supported by this analysis. The two segments sit within fractions of a percentage point on the headline elevated-risk-band rate. Neither difference observed across other indicators is large enough to be operationally meaningful. The two segments operate with comparable cyber posture despite different business models, customer bases and infrastructure profiles.
+
+7.2 By Communications Type — VoIP and Wireline Lead Elevated Risk
+
+Communications type
+
+Telcos analyzed
+
+% in elevated band
+
+Interconnected VoIP
+
+1,020
+
+71%
+
+Incumbent Local Exchange Carrier
+
+322
+
+70%
+
+Cable TV / LEC
+
+43
+
+70%
+
+CAP/LEC
+
+198
+
+66%
+
+Paging & Messaging
+
+32
+
+66%
+
+Cellular / PCS / SMR
+
+71
+
+65%
+
+Local Reseller
+
+134
+
+65%
+
+Private Service Provider
+
+129
+
+64%
+
+Interconnected VoIP — the largest provider class in the FCC registry — also carries the highest elevated-risk-band rate at 71%. ILECs and Cable TV/LEC providers follow at 70% each. Across the eight categories above, no segment falls below 64% in the elevated band. Cyber risk in US telecommunications is essentially independent of service classification.
+
+7.3 By Subdomain Footprint — The Strongest Predictor
+
+Web footprint
+
+Telcos analyzed
+
+% in elevated band
+
+Small footprint (1–5 subdomains)
+
+1,209
+
+42%
+
+Moderate footprint (6–15)
+
+1,176
+
+76%
+
+Large footprint (16–50)
+
+646
+
+85%
+
+Very large footprint (50+)
+
+75
+
+83%
+
+The size and breadth of an operator's public web presence is the strongest single predictor of elevated risk band in the analytical base. Telcos with a small footprint sit at 42% elevated risk. Those with a moderate footprint jump to 76%. By the time the footprint reaches sixteen or more publicly facing services, 85% of telcos sit in the elevated band, and the rate plateaus there.
+
+The interpretation is consequential. Cyber risk in this industry is a function of operational complexity and discipline, not company size or revenue tier. A larger operator with tightly managed infrastructure can sit in the Low band; a smaller operator with several forgotten or unmaintained services can sit in the Critical band. Footprint discipline — knowing what you own, decommissioning what you do not need, and maintaining what you keep — is the variable that matters.
+
+7.4 By Founding Era — Modern Operators Are Not Safer
+
+Era
+
+Telcos analyzed
+
+% in elevated band
+
+% with KEV present
+
+Pre-1960 (legacy wireline)
+
+396
+
+67%
+
+40%
+
+1960–1980
+
+80
+
+80%
+
+44%
+
+1980–2000
+
+437
+
+62%
+
+38%
+
+2000–2010 (internet era)
+
+483
+
+68%
+
+42%
+
+2010+ (modern operators)
+
+705
+
+71%
+
+44%
+
+Modern operators founded after 2010 are the worst-performing cohort on most dimensions. Pre-1960 incumbents perform better than internet-era operators. The intuition that newer companies inherit modern infrastructure and therefore better security posture is not supported by the data. If anything, the opposite holds: older operators have been subject to decades of regulatory scrutiny and have had time to mature their practices, while modern operators built on cloud infrastructure have inherited operational complexity faster than they have inherited security discipline.
+
+8. Why This Matters for the Industry
+
+8.1 The Public-Safety Dimension
+
+Telecommunications providers are not commercial entities like any other. For thousands of US telcos, their service is the substrate on which 911 calls travel, on which emergency alerts are delivered, and on which rural communities reach the rest of the country. A successful cybersecurity incident affecting a sole connectivity provider in a rural region can leave that region without internet access, without VoIP telephony, and — depending on the provider's role in the regional 911 architecture — without emergency dispatch capability. The 64.8% elevated-risk-band rate observed at the industry level is not solely a commercial risk number. It is also a public-resilience number.
+
+The federal regulatory framework has begun to recognize this. FCC Customer Proprietary Network Information rules require breach notification within seven business days, with substantial per-violation penalties available. CISA has placed telecommunications in its critical-infrastructure sector list. State-level data-breach notification laws apply additionally in more than thirty US jurisdictions. But regulation alone cannot remediate weak DMARC records or unpatched SharePoint instances. The compliance overlay assumes that the provider has the operational capacity to fix the underlying issue — an assumption that is fragile for the approximately 69% of telcos that employ fewer than fifty people.
+
+8.2 The Capital and Transactional Implication
+
+For investors, lenders and acquirers active in the US telecommunications space, this report reframes the diligence question. A target's reported revenue, EBITDA and subscriber count tell one story; the underlying cyber-posture indicators on which this report is based tell another. With the elevated-risk-band rate sitting at 64.8% across the analyzed base, the cyber-exposure baseline on a randomly-selected target is approximately a coin flip toward the worst risk band. Industry research from sources including the IBM Cost of a Data Breach Report consistently indicates that small-operator cyber insurance is materially mispriced relative to realistic ransomware-recovery scenarios in the relevant revenue tier.
+
+The same data also informs the consolidation thesis active in regional telecommunications markets. Roll-up plays in the small-operator end of the industry are operationally constrained not only by integration complexity but by the security-debt remediation required to bring acquired entities to a unified standard.
+
+8.3 The Vendor Ecosystem Implication
+
+The pattern of indicators surfaced by the industry analysis — recurring weakness in email authentication configuration, recurring presence of dangling DNS configuration, recurring presence of legacy operational protocols, recurring presence of long-standing CVE families — is consistent across operators in a way that suggests a small number of shared root causes rather than uncorrelated individual choices. Many small telcos use the same handful of billing platforms, OSS/BSS vendors and managed website providers. The analysis does not allow naming any specific vendor, but the clustering pattern is consistent with vendor-driven risk being a non-trivial share of the total. Industry associations and managed security service providers serving the small-telco market represent the most scalable lever for sector-wide risk reduction.
+
+9. Recommendations and Industry Roadmap
+
+9.1 Immediate Actions (0–30 Days)
+
+Move every domain to DMARC p=reject. A single DNS record change addresses email authentication weakness for the meaningful share of operators currently publishing weak DMARC. No tooling, no budget, no project plan.
+
+Restrict remote-access services to known address ranges only. Firewall configuration change. Removes the primary initial-access vector identified by Verizon DBIR and other industry-standard breach-research publications as most associated with ransomware activity.
+
+Patch CISA Known Exploited Vulnerabilities. Prioritize the entries identified in Section 5, particularly the SharePoint, Exchange, BlueKeep and PHP-CGI families. CISA mandates this for federal agencies; industry best practice extends the same expectation to telecommunications operators.
+
+Audit DNS configuration for dangling records. Highest-impact, lowest-cost action available for the largest single risk-indicator category in the analysis. A DNS audit can be run in hours; remediation is record-by-record.
+
+9.2 Short-Term Actions (30–90 Days)
+
+Move SPF records from soft-fail to hard-fail on all sending domains.
+
+Disable cleartext mail and file-transfer protocols. Force encrypted equivalents.
+
+Run a comprehensive web footprint inventory with explicit ownership assignment per asset.
+
+Update widely-used client-side libraries (notably jQuery) to current supported versions across customer-facing properties.
+
+Establish a DNS lifecycle policy that requires DNS cleanup as a sign-off step for any project decommissioning.
+
+9.3 Strategic Actions (90+ Days)
+
+Subscribe to or implement continuous attack-surface monitoring. Point-in-time analyses age out within weeks; ongoing visibility is now industry-standard practice.
+
+Evaluate managed security service provider relationships for telcos in the sub-fifty-employee segment. Federal broadband programmes such as those administered by NTIA and USDA may co-fund security capability uplift for eligible rural providers.
+
+Adopt vendor security service-level requirements. Where shared platforms (billing, OSS/BSS, managed websites) are used, require contractual breach notification timelines aligned to FCC CPNI rules.
+
+Right-size cyber insurance coverage. For operators in the $1M–$10M revenue band, industry research consistently indicates that breach-recovery costs are typically underinsured by a factor of two-to-four times realistic ransomware-recovery scenarios.
+
+10. Key Takeaways
+
+The five sentences below summarize the report:
+
+1. 64.8% of the 3,106 US telcos in this analysis sit in an elevated cyber-risk band. This is the median condition of the industry, not the worst tail.
+
+2. WISPs and cable operators are functionally indistinguishable on the headline cyber-risk indicators despite different business models — the conventional rural-versus-urban risk narrative is not supported by the data.
+
+3. Web presence complexity is the dominant predictor of risk band. Operational complexity matters more than company size, age or revenue.
+
+4. Dangling DNS configuration is the single largest risk indicator across the industry, present in 1,266 telcos (40.8%) — and the indicator most invisible to operators internally.
+
+5. The lowest-effort, highest-yield improvements are configuration changes — DMARC enforcement, remote-access access control, DNS hygiene — not new tooling. The persistence of weak posture at the industry level therefore appears more closely associated with awareness and ownership factors than with budget constraints.
+
+CLOSING NOTE
+
+This report contributes to a broader and growing body of industry research — including the Verizon DBIR series, the IBM Cost of a Data Breach Report, CISA sector advisories, and FCC public statements — that consistently indicates the cybersecurity posture of small and mid-sized critical-infrastructure operators is materially weaker than the public discourse suggests. The findings are intended to support board-level discussion, regulatory engagement and policy formulation. They are not intended to characterize any individual provider, and should not be used for that purpose.
+
+11. Responsible Disclosure Statement
+
+This report has been prepared in accordance with responsible disclosure principles consistent with widely-recognized expectations for research touching on critical-infrastructure sectors, including telecommunications. The principles applied during preparation, summarized below, are aligned with the spirit of CISA’s Coordinated Vulnerability Disclosure framework and with sector-specific expectations for safeguarding critical-infrastructure information.
+
+First, sensitive technical detail that could reasonably enable malicious activity has been intentionally omitted, summarized or generalized. The report does not publish exploitation paths, attack instructions, or any specific configuration detail that could foreseeably facilitate unauthorized access to the systems of any provider.
+
+Second, all findings are aggregated and presented at the industry level. No individual provider is named, characterized, or evaluated in this report. Aggregate counts and percentages are not intended to enable, and should not be used to attempt, the identification of any specific operator.
+
+Third, where indicators are referenced — for example CVEs catalogued by CISA as actively exploited, or weak email authentication posture — the references are limited to publicly documented industry concepts already widely discussed across cybersecurity research, federal advisories, and vendor publications. The report does not introduce new vulnerability information into the public domain.
+
+Fourth, the purpose of this report is to support sector-wide resilience, board-level discussion, regulatory engagement and academic interest. It is not intended for, and should not be used for, competitive intelligence, targeting, or any purpose adverse to the interests of any provider. The authors’ intent is constructive contribution to the cybersecurity posture of US telecommunications, not characterization of individual operators.
+
+Appendix A. Legal Risk Considerations
+
+This appendix summarizes the categories of legal risk the authors took into account in preparing this report, together with the corresponding controls applied to mitigate each category. It is provided for transparency. Nothing in this appendix constitutes legal advice; readers requiring such advice should consult qualified counsel.
+
+A.1 Computer Fraud and Abuse Act
+
+Federal courts have at times interpreted the Computer Fraud and Abuse Act broadly, including in contexts involving analysis of publicly accessible information about computer systems. To remain well within accepted boundaries, the analysis underlying this report was conducted on a strictly non-intrusive basis. No authentication was attempted against any system. No access controls were circumvented. No proprietary, internal or non-public data was accessed or attempted. No system performance, availability or confidentiality was impacted. The work relied exclusively on openly accessible information and on widely-used reference sources, used in a manner consistent with the published terms governing those sources.
+
+A.2 Digital Millennium Copyright Act §1201 (Anti-Circumvention)
+
+Section 1201 of the Digital Millennium Copyright Act restricts circumvention of technological measures controlling access to copyrighted works. This report contains no exploit code, no bypass technique, and no actionable instruction that could be construed as enabling circumvention of any access control. References to widely-documented vulnerabilities, including CVEs in the CISA Known Exploited Vulnerabilities catalogue, are limited to identification by CVE number and to descriptions already in the public domain. Such references are presented exclusively at the industry-aggregate level.
+
+A.3 Defamation and Reputational Harm
+
+Sector-level cybersecurity reporting can give rise to reputational claims if specific operators are characterized in ways they consider inaccurate or harmful. To mitigate this risk, the report does not name any individual provider. All findings are aggregated and reported at the industry level. The report has been drafted to describe observable industry-level conditions — using terms such as “present,” “analyzed,” “publicly visible,” and “elevated risk band” — rather than to assert fault or negligence with respect to any operator. Where shortfalls are discussed, they are framed as industry-level patterns associated with awareness, ownership and configuration discipline, not as judgments about the conduct of any particular entity.
+
+A.4 Critical-Infrastructure Sensitivity
+
+Telecommunications is a designated critical-infrastructure sector under the US Department of Homeland Security sector classification. To respect the sensitivity associated with that designation, sensitive technical detail has been intentionally generalized throughout this report. No IP address, asset-specific identifier, or operator-specific configuration appears in the report, and no exploitation pathway is described. The focus of the report is on aggregate sector posture relevant to policy, board-level and resilience discussion.
+
+A.5 Tool and Source Terms of Use
+
+The analysis underlying this report relied on openly accessible information accessed in a manner consistent with the published terms governing the relevant sources. Where automated retrieval was used, it was operated within the parameters those sources permit. Where reference tools or libraries were used, they were used in accordance with their respective licensing terms.
+
+A.6 Regulatory and methodological framework alignment
+
+The approach taken in preparing this report is consistent in spirit with established frameworks for non-intrusive cybersecurity research, including the passive-assessment principles articulated in NIST Special Publication 800-115, the external attack surface management principles reflected in CISA Binding Operational Directive 23-02, the best-practice guidance issued by the FCC Communications Security, Reliability, and Interoperability Council, and the DHS guidelines for security research touching on critical-infrastructure sectors. References in this report to such frameworks are made for context only and do not imply endorsement, accreditation, certification or approval by any of the referenced bodies.
+
+A.7 Disclaimers and Notices
+
+Substantive disclaimer language appears at the front of this report under “Disclaimer and Important Notices” and at the close of the report under “Important Notices Reprised.” Readers are referred to those notices in addition to this appendix. The authors expressly disclaim any liability for actions taken or not taken in reliance on the contents of this report.
+
+Important Notices Reprised
+
+All findings in this report are derived from publicly available information and presented at the industry level. The report does not name, characterize, evaluate or assess any individual provider. Findings reflect a point-in-time view as of the preparation window and should not be relied upon as current at any later date. This report does not constitute legal, financial, security, regulatory or investment advice. References to third-party industry research are made for context; readers should consult original sources directly. By reading this report, the reader accepts these notices in full.
+
+Appendix B — Data Attribution & Recognition
+
+The analysis presented in this report draws on a combination of openly published industry research and a number of widely-used open-source software components. SureShield is committed to full compliance with the licenses governing each of those components, and to recognising the contributions of the open-source community on which this work depends.
+
+B.1 Analytical Platform
+
+The industry-level findings in this report were produced using Rainmaker, SureShield's analytical platform, which integrates a number of open-source components alongside SureShield's own proprietary research workflows. The open-source components, their licenses, and the corresponding compliance disclosures are listed below.
+
+B.2 AGPL-3.0 Component
+
+Component
+
+Provider
+
+License
+
+Repository
+
+BBOT
+
+Black Lantern Security
+
+GNU Affero General Public License v3.0 (AGPL-3.0)
+
+github.com/blacklanternsecurity/bbot
+
+BBOT is integrated as a core analytical engine within Rainmaker. Because Rainmaker is offered as a network-accessible service, SureShield complies with AGPL-3.0 Section 13 by making the corresponding source code — including any modifications and integration components — available to users of the service. Source code is provided as a downloadable archive linked from each published report; archive links and version information are also available from SureShield on request.
+
+B.3 Permissive and Public-Domain Components
+
+The following components are licensed under terms permitting commercial use, modification and integration without source-disclosure obligations:
+
+Component
+
+License
+
+Use
+
+SpoofCheck
+
+MIT
+
+Email-authentication record analysis
+
+FastAPI
+
+MIT
+
+Web application framework
+
+Uvicorn
+
+BSD-3-Clause
+
+ASGI web server
+
+SQLite
+
+Public Domain
+
+Local database
+
+OpenSSL
+
+Apache License 2.0
+
+Cryptographic operations
+
+DNSUtils (dig)
+
+ISC / MPL-2.0
+
+DNS record lookup
+
+B.4 GPL Components
+
+The following components are used internally as command-line utilities. No binary distribution of modified versions occurs to end users; both are invoked as subprocesses, and full upstream source is available from each project's respective distribution.
+
+Component
+
+License
+
+Use
+
+whois
+
+GPL-2.0+
+
+Domain registration record retrieval
+
+wget
+
+GPL-3.0+
+
+Public web data retrieval
+
+B.5 Compliance Summary
+
+All original copyright notices, license texts, and attributions have been preserved.
+
+SureShield does not distribute modified binaries of GPL or AGPL components to customers — only the processed analytical output produced through their use.
+
+Source code for the AGPL-covered component is available at the address noted above.
+
+Questions about license compliance or requests for source code may be directed to support@sureshield.ai.
+
+B.6 Recognition
+
+SureShield is grateful to the open-source community and to the maintainers of each project listed above, without whose work this analysis would not be possible. SureShield strives to comply with both the letter and the spirit of every license under which those projects are made available.
+
